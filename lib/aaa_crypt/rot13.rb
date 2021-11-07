@@ -21,11 +21,7 @@ module AaaCrypt
       if ALF.include? crypt
         return ALF[(ALF.index(crypt)-13) % ALF.size]
       end
-      if crypt == " "
-        return " "
-      else
-        "#"
-      end
+      crypt == " " ? " " : "#"
     end
 
     def self.encrypt(word)
@@ -37,3 +33,4 @@ module AaaCrypt
     end
   end
 end
+

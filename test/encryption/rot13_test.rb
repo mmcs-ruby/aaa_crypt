@@ -19,7 +19,7 @@ class Rot13Test < Minitest::Test
 
   def test_rot13_decrypt_hello_world
     assert_equal"hello world!",
-                Rot13::decrypt("uryy? }?.yqb7")
+                Rot13::decrypt("uryy? }?.yqb")
   end
 
   def test_rot13_encrypt_hello_world_mixed_case

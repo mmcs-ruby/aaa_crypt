@@ -34,13 +34,21 @@ Or install it yourself as:
 
 ## Usage
 ```
-//Азбука Морзе
-morse = MorseEncrypt("Hello world!"); // "•••• • •−•• •−•• −−−   •−− −−− •−• •−•• −•• −−••−− "
-decryptMorse = MorseDecrypt(morse); // "Hello world!"
+#Morse encrypt
+morse = Morse::encrypt("Hello World!") #".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__"
+decruptmorse = Morse::decrypt(morse) #"hello world!"
 
-//Шифр Цезаря
-ces = CaesarEncrypt("Шифрование", 3); // "Ылчусегрлз"
-cesDec = CaesarDecrypt(""Ылчусегрлз); //"Шифрование"
+#Cesar encrypt
+ces = Caesar.encrypt("hello world!", 3) #"khoor zruog!"
+cesDec = Caesar.decrypt("khoor zruog!", 3) #"hello world!"
+
+#Visener encrypt
+vis = Visener.encrypt("Hello World!", "world") #"dscwr sciwg!"
+visDec = Visener.decrypt("dscwr sciwg!", "world") #"hello world!"
+
+#ROT13 encrypt
+rot13 = Rot13::encrypt("hello world!") #"uryy? }?.yqb"
+decryptrot13 = Rot13::decrypt("uryy? }?.yqb") #"hello world!"
 ```
 
 

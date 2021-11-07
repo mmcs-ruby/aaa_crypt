@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
+require_relative "../test_helper"
 
 class MorseTest < Minitest::Test
   include AaaCrypt
+  include AaaCrypt::Morse
   #"•••• • •−•• •−•• −−−   •−− −−− •−• •−•• −•• −−••−− "
   # "hello world!"
 
@@ -12,7 +13,7 @@ class MorseTest < Minitest::Test
   end
 
   def test_morse_encrypt_hello_world
-    assert_equal".... . ._.. ._.. ___   .__ ___ ._. ._.. _.. __..__ ",
+    assert_equal".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__",
                 Morse::encrypt("hello world!")
   end
 
@@ -22,11 +23,11 @@ class MorseTest < Minitest::Test
 
   def test_morse_decrypt_hello_world
     assert_equal"hello world!",
-                Morse::decrypt(".... . ._.. ._.. ___   .__ ___ ._. ._.. _.. __..__ ")
+                Morse::decrypt(".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__")
   end
 
   def test_morse_encrypt_hello_world_mixed_case
-    assert_equal".... . ._.. ._.. ___   .__ ___ ._. ._.. _.. __..__ ",
+    assert_equal".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__",
                 Morse::encrypt("Hello World!")
   end
 end

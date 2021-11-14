@@ -23,7 +23,7 @@ def self.vernam_encrypt(str,key)
   length_str=str.length
   arr=string_to_bin(str)
   key_arr=string_to_bin(key)
-  res=Array.new()
+  res=[]
   arr.zip(key_arr).each {|arr, key_arr| res.push((arr.to_i(2) ^ key_arr.to_i(2)).to_s(2).rjust(arr.length, '0'))}
   result=String.new()
   res.each {|c| result += c+" "}
@@ -42,7 +42,7 @@ def self.vernam_decrypt(str,key)
   length_str=str.length
   arr=str.split(" ")
   key_arr=string_to_bin(key)
-  res=Array.new()
+  res=[]
   arr.zip(key_arr).each {|arr, key_arr| res.push((arr.to_i(2) ^ key_arr.to_i(2)).to_s(2).rjust(arr.length, '0'))}
   result=String.new()
   res.each {|c| result += c+" "}

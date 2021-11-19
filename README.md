@@ -1,8 +1,20 @@
-# AaaCrypt
+# AAACrypt
+Hi!  This is a library, written in Ruby, that allows you to encrypt and decrypt data of various types using the most popular encryption methods. This project is being developed by students of the Institute of Mathematics, Mechanics and Computer Science.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/aaa_crypt`. To experiment with that code, run `bin/console` for an interactive prompt.
+![](https://c.tenor.com/esCBwJ7Tq4UAAAAd/pc-hack.gif)
 
-TODO: Delete this and the text above, and describe your gem
+# Encryption types
+1. Morse code
+2. Caesar's cipher
+3. ROT13
+4. Replacement Cipher
+5. RSA (asymmetric cryptography)
+6. hashing
+7. digital signature
+8. Richard Sorge cipher
+9. Vernam cipher
+10. Vigenère cipher
+11. Binary code
 
 ## Installation
 
@@ -21,8 +33,24 @@ Or install it yourself as:
     $ gem install aaa_crypt
 
 ## Usage
+```
+#Morse encrypt
+morse = Morse::encrypt("Hello World!") #".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__"
+decruptmorse = Morse::decrypt(morse) #"hello world!"
 
-TODO: Write usage instructions here
+#Cesar encrypt
+ces = Caesar.encrypt("hello world!", 3) #"khoor zruog!"
+cesDec = Caesar.decrypt("khoor zruog!", 3) #"hello world!"
+
+#Visener encrypt
+vis = Visener.encrypt("Hello World!", "world") #"dscwr sciwg!"
+visDec = Visener.decrypt("dscwr sciwg!", "world") #"hello world!"
+
+#ROT13 encrypt
+rot13 = Rot13::encrypt("hello world!") #"uryy? }?.yqb"
+decryptrot13 = Rot13::decrypt("uryy? }?.yqb") #"hello world!"
+```
+
 
 ## Development
 
@@ -32,7 +60,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/aaa_crypt. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/aaa_crypt/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mmcs-ruby/aaa_crypt. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/aaa_crypt/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 

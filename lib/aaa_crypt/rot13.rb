@@ -14,7 +14,7 @@ module AaaCrypt
       sym == " " ?  " " :  "#"
     end
 
-    def self.decrypt_letter (crypt)
+    def self.decrypt_letter(crypt)
       if NUM.include?  crypt
         return NUM[(NUM.index(crypt)-13) % 10]
       end

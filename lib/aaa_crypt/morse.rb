@@ -11,7 +11,7 @@ module AaaCrypt
       CODES.fetch letter.downcase.to_sym, "?"
     end
 
-    def self.decrypt_letter (crypt)
+    def self.decrypt_letter(crypt)
       CODES_INVERSE.fetch crypt, "?"
     end
 

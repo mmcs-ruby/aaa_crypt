@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/57410da6163563cdd537/maintainability)](https://codeclimate.com/github/mmcs-ruby/aaa_crypt/maintainability)
+
 # AAACrypt
 Hi!  This is a library, written in Ruby, that allows you to encrypt and decrypt data of various types using the most popular encryption methods. This project is being developed by students of the Institute of Mathematics, Mechanics and Computer Science.
 

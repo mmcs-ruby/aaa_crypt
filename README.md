@@ -53,6 +53,8 @@ rot13 = Rot13::encrypt("hello world!") #"uryy? }?.yqb"
 decryptrot13 = Rot13::decrypt("uryy? }?.yqb") #"hello world!"
 ```
 
+#Binary encrypt
+Binary::encrypt("hello world") # "1101000 1100101 1101100 1101100 1101111 100000 1110111 1101111 1110010 1101100 1100100 100001"
 
 ## Development
 

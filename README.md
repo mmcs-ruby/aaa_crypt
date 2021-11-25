@@ -35,7 +35,7 @@ Or install it yourself as:
     $ gem install aaa_crypt
 
 ## Usage
-```
+```ruby
 #Morse encrypt
 morse = Morse::encrypt("Hello World!") #".... . ._.. ._.. ___ _ .__ ___ ._. ._.. _.. __..__"
 decruptmorse = Morse::decrypt(morse) #"hello world!"
@@ -51,11 +51,10 @@ visDec = Visener.decrypt("dscwr sciwg!", "world") #"hello world!"
 #ROT13 encrypt
 rot13 = Rot13::encrypt("hello world!") #"uryy? }?.yqb"
 decryptrot13 = Rot13::decrypt("uryy? }?.yqb") #"hello world!"
-```
 
 #Binary encrypt
 Binary::encrypt("hello world") # "1101000 1100101 1101100 1101100 1101111 100000 1110111 1101111 1110010 1101100 1100100 100001"
-
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

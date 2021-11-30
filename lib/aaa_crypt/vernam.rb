@@ -14,13 +14,13 @@ module AaaCrypt
       encrypted_word
     end
 
-    def self.decrypt(encrypted_word, code)
-      raise Error if encrypted_word.length > code.length
+    def self.decrypt(encrypted_word, key)
+      raise Error if encrypted_word.length > key.length
 
       decrypted_word = ''
       index = 0
       encrypted_word.upcase.split('').map do |s|
-        decrypted_word += ALPHABET[(ALPHABET.index(s) - ALPHABET.index(code[index].upcase)) % 48]
+        decrypted_word += ALPHABET[(ALPHABET.index(s) - ALPHABET.index(key[index].upcase)) % 48]
         index += 1
       end
       decrypted_word
